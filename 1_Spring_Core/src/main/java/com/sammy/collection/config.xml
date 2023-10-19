@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- for creating Bean through xml based -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="st1" class="com.sammy.collection.Student">
+	<property name="name" value="Sammy"/>
+	<property name="address">
+		<list>
+		<value>India</value>
+		<value>USA</value>
+		<null></null>
+		</list>
+	</property>	
+	
+	<property name="phno">
+	<set>
+	<value>123</value>
+	<value>345</value>
+	</set>
+	</property>
+	
+	<property name="course">
+	<map>
+	<entry key="Java" value="2 month"/>
+	<entry key="C++" value="1 month"/>
+	
+	</map>
+	</property>
+	
+	</bean>
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

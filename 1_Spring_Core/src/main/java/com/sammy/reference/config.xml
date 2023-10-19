@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- for creating Bean through xml based -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="ad" class="com.sammy.reference.Address">
+		<property name="id" value="101" />
+		<property name="city" value="pune" />
+	</bean>
+
+	<bean name="st" class="com.sammy.reference.Student">
+		<property name="name" value="Sammy" />
+		<property name="address">
+		<ref bean="ad" />
+		</property>
+
+	</bean>
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

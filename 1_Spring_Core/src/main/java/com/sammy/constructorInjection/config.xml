@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- for creating Bean through xml based -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="ce" class="com.sammy.constructorInjection.Certificate">
+		<constructor-arg value="1"/>
+		<constructor-arg value="Java"/>
+	</bean>
+
+
+
+	<bean name="st" class="com.sammy.constructorInjection.Student">
+		<!-- Solution of Ambiguity Problem -->
+		<!-- <constructor-arg value="1" type="int" index="1" />
+		<constructor-arg value="Sammy" index="0" />
+		 -->
+		<constructor-arg value="1" type="int"/>
+		<constructor-arg value="Sammy"/>
+		<constructor-arg value="India" />
+		<constructor-arg>
+			<list>
+				<value>Java</value>
+				<value>Python</value>
+			</list>
+		</constructor-arg>
+
+		<constructor-arg ref="ce" />
+
+	</bean>
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
